@@ -1,0 +1,19 @@
+{
+  "name": "better-console",
+  "version": "0.0.0",
+  "description": "A better console for Node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "",
+  "keywords": [
+    "console"
+  ],
+  "author": "Mohsen Azimi",
+  "license": "BSD",
+  "dependencies": {
+    "colors": "~0.6.0-1",
+    "cli-table": "~0.2.0"
+  }
+}
