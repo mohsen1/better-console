@@ -1,5 +1,5 @@
 var colors = require('colors');
-var Table = require('cli-table');
+var logTable = require('./log_table');
 var countBuffer = {};
 
 function logWithColor(color, args){
@@ -96,6 +96,11 @@ module.exports = exports = {
   // elapsed.
   timeEnd: function(){
     console.timeEnd.apply(this, arguments);
+  },
+
+  // draws a table of elements inside of a 2d array
+  table: function(){
+    logTable.apply(this, arguments);
   }
 }
 
