@@ -2,7 +2,7 @@
 ## A better console for Node.js
 
 better-console is a drop-in replacement for node default console which
-gives you colors and more methods on console.
+gives you colors and more methods in console.
 
 ## How to use it
 
@@ -18,3 +18,8 @@ console.timeEnd("Timer");
 console.dir(myObject);
 
 ```
+
+## TODOs
+
+ * Use Unicode icons to mimic browser console icons in OSX
+ * 
