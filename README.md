@@ -22,4 +22,4 @@ console.dir(myObject);
 ## TODOs
 
  * Use Unicode icons to mimic browser console icons in OSX
- * 
+ * `console.table` 
