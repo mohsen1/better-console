@@ -3,9 +3,12 @@ var util = require('util');
 var logTable = require('./log_table');
 var countBuffer = {};
 
-function logWithColor(color, args){
+function logWithColor(color, args, isError){
   var log = util.format.apply(this, args);
-  console.log(log[color]);
+  if(isError)
+    console.error(log[color]);
+  else
+    console.log(log[color]);
 }
 
 
@@ -26,12 +29,12 @@ module.exports = exports = {
 
   // Writes a message to the console with yellow color
   warn: function(){
-    logWithColor('yellow', arguments);
+    logWithColor('yellow', arguments, true);
   },
 
   // Writes a message to the console with red color
   error: function(){
-    logWithColor('red', arguments);
+    logWithColor('red', arguments, true);
   },
 
   // Writes a message to the console with regular color
