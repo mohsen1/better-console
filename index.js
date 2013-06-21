@@ -98,7 +98,7 @@ module.exports = exports = {
     console.timeEnd.apply(this, arguments);
   },
 
-  // draws a table of elements inside of a 2d array
+  // draws a table of elements inside of a 2d array or object
   table: function(){
     logTable.apply(this, arguments);
   }

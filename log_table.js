@@ -1,19 +1,22 @@
 var Table = require('cli-table');
 
 module.exports = exports = function logTable(data){
-  // Make sure array is a 2d Array, otherwise print nothing and return
+  if(typeof data !== 'object'){
+    console.log('');
+    return;
+  }
 
+  var keys = Object.keys(data);
 
   var table = new Table({
-
+    head: keys,
+    colWidths: keys.map(function (el) { return data[el].toString().length; })
   });
 
-};
+  keys.forEach(function (el) {
+    table.push(data[el]);
+  });
 
-function canBeDrawn(data){
-  var is2dArray = Array.isArray(array) && Array.isArray(array[0]);
-  var isObject = typeof data === 'object';
-  // TODO make this shit
-  
-  return true;
-}
+  console.log(table.toString());
+
+};

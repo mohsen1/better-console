@@ -48,5 +48,13 @@ console.error('');
 console.count('me');
 console.count('me');
 
+var obj = {
+  SF: {population: 1000},
+  LA: {population: 2000},
+  NY: {population: 3000}
+};
+console.table(obj);
+
+
 console.assert(true);
 console.assert(false);
