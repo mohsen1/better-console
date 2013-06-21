@@ -1,13 +1,48 @@
 var console = require('./index');
 
-
+console.log('Something');
 console.clear();
+console.info('Console should be clean now');
+
+console.log('Log');
+console.log('A string');
+console.log('A manipulated string (%s) with number: %d', 'apple', 42);
+console.log(1);
+console.log(true);
+console.log({me:1});
+console.log([1,2,3]);
+console.log('');
 
 
-console.log('A log');
 console.info('Information');
+console.info('A string');
+console.info('A manipulated string (%s) with number: %d', 'apple', 42);
+console.info(1);
+console.info(true);
+console.info({me:1});
+console.info([1,2,3]);
+console.info('');
+
+
 console.warn('Warning');
+console.warn('A string');
+console.warn('A manipulated string (%s) with number: %d', 'apple', 42);
+console.warn(1);
+console.warn(true);
+console.warn({me:1});
+console.warn([1,2,3]);
+console.warn('');
+
+
 console.error('Error');
+console.error('A string');
+console.error('A manipulated string (%s) with number: %d', 'apple', 42);
+console.error(1);
+console.error(true);
+console.error({me:1});
+console.error([1,2,3]);
+console.error('');
+
 
 
 console.count('me');

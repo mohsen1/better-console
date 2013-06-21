@@ -1,22 +1,19 @@
 var colors = require('colors');
+var util = require('util');
 var logTable = require('./log_table');
 var countBuffer = {};
 
 function logWithColor(color, args){
-    for(var i=0; i<args.length; i++){
-      if(typeof args[i] === 'string'){
-        args[i] = args[i][color];
-      }
-    }
-  console.log.apply(this, args);
+  var log = util.format.apply(this, args);
+  console.log(log[color]);
 }
 
 
 module.exports = exports = {
 
-  // Writes a message to the console. You may pass as many arguments as 
+  // Writes a message to the console. You may pass as many arguments as
   // you'd like, and they will be joined together in a space-delimited line.
-  // The first argument to log may be a string containing 
+  // The first argument to log may be a string containing
   // printf-like string substitution patterns.
   log: function(){
     console.log.apply(this, arguments);
@@ -42,7 +39,7 @@ module.exports = exports = {
     console.log.apply(this, arguments);
   },
 
-  // Prints an interactive listing of all properties of the object. 
+  // Prints an interactive listing of all properties of the object.
   dir: function(){
     console.dir.apply(this, arguments);
   },
@@ -52,8 +49,8 @@ module.exports = exports = {
      process.stdout.write('\u001B[2J\u001B[0;0f');
   },
 
-  // Prints a stack trace of JavaScript execution at the point 
-  // where it is called. The stack trace details the functions on the stack, 
+  // Prints a stack trace of JavaScript execution at the point
+  // where it is called. The stack trace details the functions on the stack,
   // as well as the values that were passed as arguments to each function.
   trace: function(){
     console.trace.apply(this, arguments);
@@ -63,7 +60,7 @@ module.exports = exports = {
   // it Writes red warning and throws assertion error
   assert: function(assertion){
     // todo: for now we are cheating, it's just console.erroring and then
-    // leave console.asset to do it's job. actual todo: print what 
+    // leave console.asset to do it's job. actual todo: print what
     // console.assert prints just make first line red
     if (!assertion){
       logWithColor('red', ['AssertionError: false == true']);
@@ -102,6 +99,6 @@ module.exports = exports = {
   table: function(){
     logTable.apply(this, arguments);
   }
-}
+};
 
 
