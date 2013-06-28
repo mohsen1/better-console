@@ -6,17 +6,28 @@ module.exports = exports = function logTable(data){
     return;
   }
 
-  var keys = Object.keys(data);
+  if(typeof data[Object.keys(data)[0]] !== 'object'){
+    console.log('');
+    return;
+  }
 
+  var firstKey = Object.keys(data)[0];
+  var firstObject = data[firstKey];
+  var thead = Object.keys(firstObject);
+  thead.unshift('(index)');
+  
   var table = new Table({
-    head: keys,
-    colWidths: keys.map(function (el) { return data[el].toString().length; })
+    head: thead,
+    colWidths: thead.map(function(){return 15;}) //TODO: find colwidths
   });
 
-  keys.forEach(function (el) {
-    table.push(data[el]);
+  Object.keys(data).forEach(function(rowKey){
+    var row = data[rowKey];
+    var rowValues = Object.keys(row).map(function(k){
+      return row[k];
+    });
+    table.push([rowKey].concat(rowValues));
   });
 
   console.log(table.toString());
-
 };

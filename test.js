@@ -48,12 +48,26 @@ console.error('');
 console.count('me');
 console.count('me');
 
+var arr = [
+  ['a','b','c','d'],
+  ['e','f','h','j']
+];
+console.table(arr);
+
 var obj = {
   SF: {population: 1000},
   LA: {population: 2000},
   NY: {population: 3000}
 };
 console.table(obj);
+
+var obj = {
+  SF: {f: 300, m:100},
+  LA: {f: 200, m:200},
+  NY: {f: 400, m:500}
+};
+console.table(obj);
+
 
 
 console.assert(true);
