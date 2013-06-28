@@ -1,6 +1,6 @@
 {
   "name": "better-console",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "A better console for Node.js",
   "main": "index.js",
   "scripts": {
