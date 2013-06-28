@@ -55,9 +55,9 @@ var arr = [
 console.table(arr);
 
 var obj = {
-  SF: {population: 1000},
-  LA: {population: 2000},
-  NY: {population: 3000}
+  SF: {total_population: 1000},
+  LA: {total_population: 2000},
+  NY: {total_population: 3000}
 };
 console.table(obj);
 
@@ -68,6 +68,12 @@ var obj = {
 };
 console.table(obj);
 
+
+var arr = [
+  ['a','b','c','d'],
+  ['e','f','hoooohoooohooooo','j']
+];
+console.table(arr);
 
 
 console.assert(true);
