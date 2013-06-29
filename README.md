@@ -1,5 +1,16 @@
 # better-console
+
+## Installation
+
+Use NPM
+
+```shell
+npm install better-console
+```
+
 ## A better console for Node.js
+
+
 
 better-console is a drop-in replacement for node default console which
 gives you colors and more methods in console.
@@ -22,4 +33,3 @@ console.dir(myObject);
 ## TODOs
 
  * Use Unicode icons to mimic browser console icons in OSX
- * `console.table` 
