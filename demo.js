@@ -14,9 +14,9 @@ console.log("   ['e','f','h','j']");
 console.log(" ];");
 console.log("> console.table(arr);");
 
-console.log('');
 var arr = [
   ['a','b','c','d'],
   ['e','f','h','j']
 ];
 console.table(arr);
+console.log('> ');
