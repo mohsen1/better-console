@@ -19,6 +19,18 @@ module.exports = exports = function logTable(data){
   var colWidths = thead.map(function(item){return calculateColWidth(item);});
 
 
+  Object.keys(data).forEach(function(rowKey){
+    var row = data[rowKey];
+
+    if(typeof row == 'object'){
+      Object.keys(row).forEach(function(k,i){
+        var width = calculateColWidth (row[k]);
+        if(colWidths[i] < width)
+          colWidths[i+1] = width;
+      });
+    }
+  });
+
   var table = new Table({
     head: thead,
     colWidths: colWidths
@@ -39,16 +51,16 @@ module.exports = exports = function logTable(data){
   console.log(table.toString());
 
   function calculateColWidth (item) {
-    var MAX_COL_WIDTH = 30;
-    var MIN_COL_WIDTH = 8;
-    var width = MIN_COL_WIDTH;
+    var MAX_COL_WIDTH = 28;
+    var MIN_COL_WIDTH = 3;
+    var width = null;
 
     if(item.toString){
      if(item.toString().length > MAX_COL_WIDTH)
       width = MAX_COL_WIDTH;
      if(item.toString().length < MIN_COL_WIDTH)
       width = MIN_COL_WIDTH;
-     else
+     else if(!width)
       width = item.toString().length;
     }else{
       width = MAX_COL_WIDTH;
