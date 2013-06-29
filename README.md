@@ -1,5 +1,7 @@
 # Better Console
 
+![Screenshot](https://raw.github.com/mohsen1/better-console/master/screenshot.png)
+
 ## Installation
 
 Use NPM
