@@ -25,7 +25,7 @@ module.exports = exports = function logTable(data){
     if(typeof row == 'object'){
       Object.keys(row).forEach(function(k,i){
         var width = calculateColWidth (row[k]);
-        if(colWidths[i] < width)
+        if(colWidths[i+1] < width)
           colWidths[i+1] = width;
       });
     }
