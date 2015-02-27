@@ -74,7 +74,8 @@ var arr = [
   ['e','f','hoooohoooohooooo','j']
 ];
 console.table(arr);
-
+console.table(null);
+console.table([null]);
 
 console.assert(true);
 console.assert(false);
