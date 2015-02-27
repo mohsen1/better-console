@@ -1,12 +1,12 @@
 var Table = require('cli-table');
 
 module.exports = exports = function logTable(data){
-  if(typeof data !== 'object'){
+  if(typeof data !== 'object' || data === null){
     console.log('');
     return;
   }
 
-  if(typeof data[Object.keys(data)[0]] !== 'object'){
+  if(typeof data[Object.keys(data)[0]] !== 'object' || data[Object.keys(data)[0]] === null){
     console.log('');
     return;
   }
