@@ -21,7 +21,7 @@ gives you colors and more methods in console.
 You can override `console` object itself or assign better console to another variable. It's completely safe to override the native console object because better console calls native console methods for methods that are already available in it.
 
 ```
-console = require('better-console');
+var console = require('better-console');
 
 console.log("This is a log information");
 console.warn("Warning!");
