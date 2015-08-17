@@ -16,7 +16,7 @@
   "author": "Mohsen Azimi",
   "license": "BSD",
   "dependencies": {
-    "colors": "~0.6.0-1",
-    "cli-table": "~0.2.0"
+    "colors": "~1.1.2",
+    "cli-table": "~0.3.1"
   }
 }
