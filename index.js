@@ -1,4 +1,4 @@
-var colors = require('colors');
+var chalk = require('chalk');
 var util = require('util');
 var logTable = require('./log_table');
 var countBuffer = {};
@@ -6,13 +6,13 @@ var countBuffer = {};
 function logWithColor(color, args, isError){
   var log = util.format.apply(this, args);
   if(isError)
-    console.error(log[color]);
+    console.error(chalk[color](log));
   else
-    console.log(log[color]);
+    console.log(chalk[color](log));
 }
 
 
-module.exports = exports = {
+module.exports = {
 
   // Writes a message to the console. You may pass as many arguments as
   // you'd like, and they will be joined together in a space-delimited line.

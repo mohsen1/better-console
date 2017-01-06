@@ -16,7 +16,7 @@ module.exports = exports = function logTable(data){
   var firstObject = data[firstKey];
   var thead = Object.keys(firstObject);
   thead.unshift('(index)');
-  var colWidths = thead.map(function(item){return calculateColWidth(item);});
+  var colWidths = thead.map(calculateColWidth);
 
 
   Object.keys(data).forEach(function(rowKey){
